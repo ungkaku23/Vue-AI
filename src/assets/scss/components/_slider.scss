@@ -1,0 +1,19 @@
+.slider {
+  display: block !important;
+  &.slider-horizontal {
+    width: 100% !important;
+    height: 5px !important;
+    .slider-track {
+      height: 5px !important;
+      margin-top: 4px !important;
+      .slider-selection {
+        background-color: var(--blue);
+        background-image: none;
+      }
+    }
+  }
+  .slider-handle {
+    background-color: var(--danger);
+    background-image: none;
+  }
+}

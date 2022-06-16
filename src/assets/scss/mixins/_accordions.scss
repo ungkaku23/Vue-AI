@@ -1,0 +1,115 @@
+// Accordion Inverse variations
+// @mixin accordion-inverse-variant($color) {
+//   background: rgba($color, 0.16);
+//   color: $color;
+//   border: none;
+
+//   .card-header {
+//     color: $color;
+//     border: none;
+
+//     a,
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6,
+//     p,
+//     span {
+//       color: $color !important;
+//     }
+
+//     a {
+//       border-color: $color;
+
+//       &:before {
+//         color: $color !important;
+//       }
+
+//       &[aria-expanded='true'] {
+//         border-bottom: 1px solid rgba($color, 0.16);
+//       }
+
+//       &[aria-expanded='false'] {
+//         border-bottom: 1px solid transparent;
+//       }
+//     }
+//   }
+// }
+// @mixin accordion-outline-variant($color) {
+//   .card {
+//     border-color: $color;
+
+//     .card-header {
+//       border: none;
+
+//       a {
+//         border-color: $color;
+
+//         &:before {
+//           color: $color;
+//         }
+//       }
+//     }
+//   }
+// }
+// @mixin accordion-multiple-outline-variant($color) {
+//   border-color: theme-color($color);
+
+//   .card-header {
+//     a {
+//       .card-icon {
+//         color: theme-color($color);
+//       }
+
+//       &:before {
+//         color: theme-color($color);
+//       }
+
+//       &[aria-expanded='true'] {
+//         border-bottom: 1px solid theme-color($color);
+//       }
+
+//       &[aria-expanded='false'] {
+//         border-bottom: 1px solid $white;
+//       }
+//     }
+//   }
+// }
+// @mixin accordion-multiple-filled-variant($color) {
+//   .card-header {
+//     a {
+//       background: theme-color($color);
+
+//       &[aria-expanded='true'] {
+//         background: theme-color($color);
+//       }
+
+//       &[aria-expanded='false'] {
+//         background: theme-color($color);
+//       }
+//     }
+//   }
+// }
+.collapse-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-left: solid 2px white;
+    border-bottom: solid 2px white;
+    transition: all ease 0.2s;
+    margin-right: 15px;
+  }
+  &.collapsed::before {
+    transform: rotate(-135deg);
+  }
+  &.not-collapsed::before {
+    transform: rotate(-45deg);
+    margin-top: -5px;
+  }
+}

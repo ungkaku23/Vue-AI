@@ -1,0 +1,38 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('~@/assets/fonts/graphik/Graphik-Semibold.woff2') format('woff2'),
+      url('~@/assets/fonts/graphik/Graphik-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('~@/assets/fonts/graphik/Graphik-Medium.woff2') format('woff2'),
+      url('~@/assets/fonts/graphik/Graphik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('~@/assets/fonts/graphik/Graphik-Bold.woff2') format('woff2'),
+      url('~@/assets/fonts/graphik/Graphik-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('~@/assets/fonts/graphik/Graphik-Regular.woff2') format('woff2'),
+      url('~@/assets/fonts/graphik/Graphik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

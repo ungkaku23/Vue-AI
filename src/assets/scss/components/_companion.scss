@@ -1,0 +1,51 @@
+.companion-tab {
+  max-height: calc(100vh - 100px);
+  // padding-right: 15px;
+  overflow: auto;
+  .item-info {
+    background-color: white;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+
+    border: 1px solid #e8e5e5;
+    .item-title {
+      display: block;
+      color: var(--primary);
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .add-to-notes {
+      background-color: white;
+      position: absolute;
+      // padding: 3px;
+      right: 3px;
+      z-index: 10;
+      top: 3px;
+      visibility: hidden;
+      cursor: pointer;
+    }
+    &:hover {
+      .add-to-notes {
+        visibility: visible;
+      }
+    }
+    .item-property {
+      margin-bottom: 0.25rem;
+      font-size: 12px;
+      .label {
+        font-weight: bold;
+        margin-right: 5px;
+        color: var(--primary);
+      }
+    }
+    .truncated {
+      font-size: 13px;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

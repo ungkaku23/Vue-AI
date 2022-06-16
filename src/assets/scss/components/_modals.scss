@@ -1,0 +1,20 @@
+/* Modals */
+.modal {
+  .modal-dialog {
+    margin-top: calc(#{$navbar-height} + 30px);
+    &.modal-lg {
+      max-width: 900px;
+    }
+    .modal-content {
+      .modal-header {
+        .close {
+          span {
+            font-size: 14px;
+            font-weight: 400;
+            color: #6a6a6a;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,344 @@
+/* Icons */
+
+.icons-list {
+  border-left: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  > div {
+    background: $white;
+    border-top: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-family: $type1-regular;
+    font-size: $default-font-size;
+    i {
+      display: inline-block;
+      font-size: 20px;
+      width: 40px;
+      text-align: left;
+      color: theme-color(primary);
+    }
+  }
+}
+
+// font Update
+
+.description {
+  color: #363636 !important;
+}
+
+// Custom CSS for icons
+.collaborators .collaborator-item {
+  text-align: center;
+  position: relative;
+}
+
+.collaborators .collaborator-item img {
+  max-width: 12px;
+  max-height: 12px;
+}
+
+.collaborators .collaborator-item:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: auto;
+  background: green;
+  border-radius: 100%;
+}
+
+// Alert Font
+
+.alert.text-center {
+  font-weight: 700;
+  color: #6e4d92;
+}
+
+.resizable-editor .ProseMirror p {
+  line-height: 22px;
+  color: #382868;
+  font-size: 14px;
+}
+
+.resizable-editor .ProseMirror.ProseMirror-focused,
+.ProseMirror.ProseMirror-focused {
+  background: #f3f4f6;
+  outline-color: #94b7e8 !important;
+}
+
+.resizable-editor .ProseMirror:hover,
+.ProseMirror:hover {
+  background: #f3f4f6;
+}
+
+.explorer-container input,
+.form-group input {
+  font-size: 14px !important;
+  line-height: 23px;
+}
+
+.explorer-container .item-info .item-title {
+  line-height: 23px;
+  font-size: 16px;
+}
+
+.resizable-editor .ProseMirror {
+  border: 0px !important;
+}
+
+.headlines .card,
+.messages-container .card,
+.answers-container .card,
+.promotes-container .card,
+.quotes-container .card,
+.questions-container .card,
+.message-container .card {
+  padding-bottom: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.main-view .navbar .navbar-menu-wrapper {
+  padding-left: 0;
+}
+
+// Dropdown Menu
+.dropdown-menu.dropdown-menu-right li a.dropdown-item a {
+  color: #3f0f40;
+  font-weight: 500;
+}
+
+.dropdown-menu.dropdown-menu-right li a.dropdown-item:hover {
+  text-decoration: none;
+  background-color: #3f0f40;
+}
+
+.dropdown-menu.dropdown-menu-right li:first-child a.dropdown-item:hover {
+  background: transparent !important;
+}
+.dropdown-menu.dropdown-menu-right li a.dropdown-item:hover a,
+.dropdown-menu.dropdown-menu-right li a.dropdown-item:hover a i {
+  color: #fff !important;
+}
+
+.dropdown-menu.dropdown-menu-right .dropdown-header img {
+  max-width: 60px;
+}
+
+.preview-list .preview-item:hover {
+  background: transparent !important;
+}
+
+.sidebar-footer {
+  margin-bottom: 30px;
+}
+
+table td a.delete i {
+  color: red;
+}
+
+// Draft Tools
+
+.draft-tools button {
+  background: #d7d7d7;
+}
+.draft-tools button:hover {
+  background: #3f0f40;
+  color: #fff;
+}
+
+// Artical Body
+
+.article-item .card-body .article-content {
+  padding: 15px;
+  height: auto;
+  max-height: 170px;
+}
+
+.article-item .card-body .article-title {
+  padding: 0px 15px;
+}
+
+#accordion-articles .d-flex.justify-content-end {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.explorer-container h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+.draftpage .card-body {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+// @media (min-width: 601px) {
+//   .marlft {
+//     padding: 0px 3rem !important;
+//   }
+// }
+
+.btn-HelloScribe {
+  background-color: #3f0e40 !important;
+  border: 0px;
+  outline: none;
+}
+
+.text-center.text-underline a {
+  text-decoration: underline;
+}
+
+.side-icon {
+  background-size: 150%;
+}
+
+.side-icon {
+  -webkit-mask-repeat: no-repeat;
+}
+
+.alert-danger {
+  background-color: transparent !important;
+  border: 0px !important;
+}
+
+.dropdown-menu li a a:hover {
+  text-decoration: none !important;
+}
+
+@media (min-width: 600px) and (max-width: 2000px) {
+  .sidebar-offcanvas,
+  .app-sidebar,
+  .main-view .navbar .navbar-brand-wrapper {
+    max-width: $sidebar-width-lg;
+  }
+
+  .main-view .navbar .navbar-menu-wrapper {
+    width: calc(100% - #{$sidebar-width-lg});
+  }
+
+  .quick-menu-icon {
+    max-width: 25px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .notes-sections .create-note {
+    padding: 6px 4px !important;
+    left: -28px !important;
+  }
+  .dashboard .stretch-card .card-body.new-document-container {
+    align-items: self-end;
+  }
+  #toggleMenuButton {
+    margin-left: 14px;
+    border: 1px solid #4d044e00;
+    padding: 0;
+    font-size: 23px;
+  }
+  .alert.text-center {
+    background: #f5f5f5;
+  }
+  .mfix textarea {
+    max-height: 250px;
+  }
+  .headlines .card,
+  .messages-container .card,
+  .answers-container .card,
+  .promotes-container .card,
+  .quotes-container .card,
+  .questions-container .card,
+  .message-container .card {
+    padding-bottom: 20px !important;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #a9a9a9 !important;
+    border-radius: 0px !important;
+    padding-top: 10px;
+  }
+  .messages-container
+    .card
+    .message-item
+    .item-title
+    .resizable-editor
+    .ProseMirror,
+  .ProseMirror {
+    border: 0px !important;
+  }
+  .messages-container .card .message-item .d-flex,
+  .message-container .d-flex,
+  .answer-item .d-flex,
+  .promote-item .d-flex,
+  .quotes-container .d-flex,
+  .questions-container .d-flex,
+  .headlines .d-flex, 
+  .summary-item .d-flex {
+    flex-wrap: wrap;
+  }
+  .messages-container .card .message-item .d-flex button,
+  .message-container .d-flex button,
+  .answer-item .d-flex button,
+  .promote-item .d-flex button,
+  .quotes-container .d-flex button,
+  .questions-container .d-flex button,
+  .headlines .d-flex button, 
+  .summary-item .d-flex button {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+    justify-content: center;
+    box-shadow: 0px 1px 1px #f3f3f3;
+  }
+  .headlines {
+    margin-bottom: 30px;
+  }
+  .description h4 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .description span {
+    position: relative;
+    top: -3px;
+  }
+}
+
+.description h4,
+.dashboard h4 {
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: normal;
+}
+.description span {
+  position: relative;
+  top: -3px;
+}
+.grid-margin.stretch-card .card.quick-status-card {
+  border: 0px !important;
+}
+.form-group.required .col-form-label,
+.form-group .col-form-label {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  color: #280728;
+}
+
+.btn-outline-dark:active,
+.btn-outline-dark:focus,
+.btn-outline-dark:hover {
+  background: #9bb9dd !important;
+}
+
+.btn-outline-dark:active span,
+.btn-outline-dark:focus span,
+.btn-outline-dark:hover span {
+  color: #fff !important;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons8-back_to</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Desktop-HD" transform="translate(-647.000000, -1213.000000)" fill="#574B8A" fill-rule="nonzero">
+            <g id="icons8-back_to" transform="translate(657.000000, 1223.000000) rotate(-90.000000) translate(-657.000000, -1223.000000) translate(647.000000, 1213.000000)">
+                <path d="M10,0 C4.477,0 0,4.477 0,10 C0,15.523 4.477,20 10,20 C15.523,20 20,15.523 20,10 C20,4.477 15.523,0 10,0 Z M13,15 L10,15 L6,10 L10,5 L13,5 L9,10 L13,15 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+.nav-tabs {
+  .nav-link {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0.5rem 1rem;
+    @media (max-width: 550px) {
+      padding: 0.5rem 0.4rem;
+    }
+    color: $gray-600;
+    background-color: white;
+    &.active {
+      border-top: solid 2px #46c35f;
+      color: #46c35f;
+      font-weight: 600;
+    }
+  }
+}
+
+.compose-tab-body {
+  min-height: calc(100vh - 260px);
+}

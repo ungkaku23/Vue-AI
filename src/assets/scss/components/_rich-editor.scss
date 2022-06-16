@@ -1,0 +1,18 @@
+.tox.tox-tinymce {
+  border: none;
+}
+
+.tox-toolbar__primary {
+  border: none;
+}
+.tox:not([dir='rtl']) .tox-toolbar__group:not(:last-of-type) {
+  border-right: none !important;
+}
+
+.tox-statusbar__path {
+  display: none !important;
+}
+
+.tox-statusbar__branding {
+  display: none;
+}

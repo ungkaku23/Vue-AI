@@ -1,0 +1,131 @@
+/*------------------------------------------------------------------
+ [Master Stylesheet]
+
+  Boilerplate:	HelloScribe.io
+  Version:	1.0
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+/* === Import Bootstrap functions and variables === */
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+/*-------------------------------------------------------------------*/
+/* === Import template variables === */
+@import "variables";
+
+/*-------------------------------------------------------------------*/
+/* === SCSS Compass Functions === */
+@import "../../../node_modules/compass-mixins/lib/compass";
+@import "../../../node_modules/compass-mixins/lib/animate";
+
+/*-------------------------------------------------------------------*/
+/* === Boostrap SCSS === */
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap-vue/src/index.scss";
+
+/*-------------------------------------------------------------------*/
+/* === Template mixins === */
+@import "mixins/animation";
+@import "mixins/accordions";
+@import "mixins/background";
+@import "mixins/badges";
+@import "mixins/blockqoute";
+/* @import "mixins/breadcrumbs" */
+@import "mixins/buttons";
+@import "mixins/cards";
+@import "mixins/misc";
+@import "mixins/no-ui-slider";
+@import "mixins/pagination";
+@import "mixins/text";
+/* @import "mixins/popovers"; */
+@import "mixins/tooltips";
+
+/*-------------------------------------------------------------------*/
+/* === Core Styles === */
+@import "reset";
+@import "fonts";
+@import "functions";
+@import "sidebar";
+@import "navbar";
+@import "typography";
+@import "misc";
+@import "footer";
+@import "utilities";
+@import "background";
+@import "demo";
+
+/*-------------------------------------------------------------------*/
+/* === Components === */
+@import "components/badges";
+@import "components/bootstrap-progress";
+/* @import "components/breadcrumbs"; */
+@import "components/buttons";
+@import "components/cards";
+@import "components/checkbox-radio";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/icons";
+/* @import "components/pagination"; */
+@import "components/preview";
+@import "components/tables";
+@import "components/lists";
+/* @import "components/loaders/loaders"; */
+/* @import "components/new-account"; */
+/* @import "components/portfolio"; */
+@import "components/nav";
+@import "components/dashboard";
+@import "components/tab";
+@import "components/rich-editor";
+@import "components/companion";
+@import "components/article-card";
+@import "components/modals";
+@import "components/tiptap";
+@import "components/slider";
+@import "components/saved-explorer";
+
+/*-------------------------------------------------------------------*/
+/* === Plugin override === */
+
+/*-------------------------------------------------------------------*/
+/* === Landing screens === */
+@import "landing-screens/auth";
+@import "landing-screens/error";
+/* @import "landing-screens/profile-page"; */
+@import "landing-screens/landing";
+@import "landing-screens/hello-landing-page";
+
+@import "layout";
+@import "animation";
+@import "users";
+
+@import "components/availabletools";
+@import "components/file&folders";
+
+.toast-popup {
+  width: 25em !important;
+}
+
+.toast-header {
+  flex-direction: row !important;
+  border-bottom: none !important;
+  .swal2-icon {
+      width: 20px !important;
+      height: 20px !important;
+      line-height: 20px !important;
+      border-width: 3px !important;
+      margin: 0 !important;
+      margin-right: 10px !important;
+
+      .swal2-icon-content {
+          font-size: 1.5em !important;
+      }
+  }
+}
+
+.toast-title {
+  font-size: 16px !important;
+  margin-bottom: 0 !important;
+  font-weight: 500 !important;
+  margin-bottom: 0 !important;
+}

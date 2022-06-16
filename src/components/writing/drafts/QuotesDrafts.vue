@@ -1,0 +1,124 @@
+<template>
+  <div class="bg-light rounded">
+    <div class="w-100 d-flex py-5 my-5 justify-content-center" v-if="loading">
+      <b-spinner />
+    </div>
+    <div
+      class="w-100 d-flex py-4 my-4 justify-content-center"
+      v-if="!loading && quotes.length === 0"
+    >
+      There are no saved quotes.
+    </div>
+    <VueSlickCarousel
+      :arrows="false"
+      :dots="true"
+      :slidesPerRow="2"
+      :responsive="responsive"
+      v-if="!loading && quotes.length > 0"
+    >
+      <div class="article-item" v-for="(item, idx) in quotes" :key="idx">
+        <b-card>
+          <draft-tools
+            :hideView="true"
+            @viewItem="goToDetail(item)"
+            @deleteItem="deleteItem(item)"
+            @copyToClipboard="copyToClipboard(item)"
+          />
+          <!-- <div class="text-center">
+            <span class="material-icons-outlined article-icon">
+              description
+            </span>
+          </div> -->
+          <div class="article-title d-flex align-items-start">
+            <img
+              src="@/assets/images/icons/article-item.svg"
+              alt="folder"
+              class="mr-1"
+            />{{ item.sm }}
+          </div>
+        </b-card>
+      </div>
+    </VueSlickCarousel>
+  </div>
+</template>
+
+<script>
+import VueSlickCarousel from 'vue-slick-carousel';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+import defaultSliderConfig from '../../../constants/sliderConfig';
+import routerItems from '../../../constants/routerItems';
+import { http } from '../../../services/HttpService';
+import { copyTextToClipboard } from '../../../utils/common';
+import DraftTools from './DraftTools.vue';
+import { mapActions } from 'vuex';
+
+export default {
+  name: 'QuotesDrafts',
+  components: { VueSlickCarousel, DraftTools },
+  props: {
+    query: {
+      type: String,
+      default: '',
+    },
+  },
+  data() {
+    return {
+      responsive: defaultSliderConfig,
+      quotes: [],
+      loading: false,
+    };
+  },
+  methods: {
+    ...mapActions({
+      setAnswer: 'draftStore/setAnswer',
+    }),
+    async loadData() {
+      const strLimit = 200;
+      try {
+        this.loading = true;
+
+        const {
+          data: { quotes },
+        } = await http().get('/quotes', {
+          params: { query: this.query },
+        });
+        this.quotes = quotes.map((item) => ({
+          ...item,
+          sm: this.$func.formttedSubstring(item.text, strLimit),
+        }));
+        // eslint-disable-next-line no-empty
+      } catch (err) {}
+      this.loading = false;
+    },
+    goToDetail(item) {
+      this.setAnswer(item);
+      this.$router.push({ name: routerItems.BRAINSTORM });
+    },
+    async deleteItem(item) {
+      try {
+        await http().delete('quote/' + item._id);
+        this.loadData();
+        // eslint-disable-next-line no-empty
+      } catch (err) {}
+    },
+    copyToClipboard(item) {
+      copyTextToClipboard(item.text);
+    },
+  },
+  mounted() {
+    this.loadData();
+  },
+  watch: {
+    query: function() {
+      this.loadData();
+    },
+  },
+};
+</script>
+<style lang="scss" scoped>
+.material-icons-outlined {
+  color: #4a4a4a !important;
+}
+</style>
